@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_movies_view_tree" model="ir.ui.view">
+        <field name="name">movies.view.tree</field>
+        <field name="model">movies.view</field>
+        <field name="arch" type="xml">
+            <list string="Visualitzacions">
+                <field name="view_date"/>
+                <field name="movie_id"/>
+                <field name="rating" avg="Promig"/>
+                <field name="review"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_movies_view_form" model="ir.ui.view">
+        <field name="name">movies.view.form</field>
+        <field name="model">movies.view</field>
+        <field name="arch" type="xml">
+            <form string="Visualització">
+                <sheet>
+                    <group>
+                        <field name="movie_id"/>
+                        <field name="view_date"/>
+                        <field name="owner_dam"/>
+                        <field name="rating"/>
+                        <field name="review"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

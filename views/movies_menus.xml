@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_movies_root" 
+              name="Pel·lícules" 
+              sequence="10"/>
+
+    <menuitem id="menu_movies_content" 
+              name="Pel·lícules" 
+              parent="menu_movies_root" 
+              sequence="10"/>
+
+    <record id="action_movies_movie" model="ir.actions.act_window">
+        <field name="name">Pel·lícules</field>
+        <field name="res_model">movies.movie</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="action_movies_view" model="ir.actions.act_window">
+        <field name="name">Visualitzacions</field>
+        <field name="res_model">movies.view</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_movies_movie" 
+              name="Pel·lícules" 
+              parent="menu_movies_content" 
+              action="action_movies_movie" 
+              sequence="10"/>
+
+    <menuitem id="menu_movies_view" 
+              name="Visualitzacions" 
+              parent="menu_movies_content" 
+              action="action_movies_view" 
+              sequence="20"/>
+</odoo>

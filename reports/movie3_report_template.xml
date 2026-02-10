@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_movie3_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Fitxa de la pel·lícula: <span t-field="o.title"/></h2>
+                        <div class="row">
+                            <div class="col-6">
+                                <strong>Director:</strong> <span t-field="o.director"/><br/>
+                                <strong>Any:</strong> <span t-field="o.year"/><br/>
+                                <strong>País:</strong> <span t-field="o.country_id.name"/>
+                            </div>
+                            <div class="col-6">
+                                <strong>Recaptació ($):</strong> <span t-field="o.recaptacio_dolars"/><br/>
+                                <strong>Recaptació (€):</strong> <span t-field="o.recaptacio_euros"/><br/>
+                                <strong>Valoració:</strong> <span t-field="o.average_rating"/>
+                            </div>
+                        </div>
+                        <hr/>
+                        <h4>Sinopsi</h4>
+                        <p t-field="o.synopsis"/>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

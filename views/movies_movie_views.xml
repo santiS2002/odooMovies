@@ -8,6 +8,7 @@
                 <field name="title"/>
                 <field name="year" widget="char"/>               
                 <field name="director"/>
+                <field name="recaptacio_euros" sum="Total Euros"/>
             </list>
         </field>
     </record>
@@ -30,7 +31,9 @@
                         </group>
                         <group>
                             <field name="director"/>
-                            <field name="country_id"/>
+                            <field name="country_id" string="País base" options="{'no_create': True}"/>
+                            <field name="recaptacio_dolars"/>
+                            <field name="recaptacio_euros" readonly="1"/>
                         </group>
                     </group>
                     <notebook>

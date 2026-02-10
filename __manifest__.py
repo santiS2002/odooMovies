@@ -1,39 +1,36 @@
 {
     'name': "movies",
 
-    'summary': "Short (1 phrase/line) summary of the module's purpose",
+    'summary': "Mòdul de gestió de pel·lícules - Ampliació Part 3",
 
     'description': """
-Long description of module's purpose
+        Mòdul personalitzat per a la gestió de pel·lícules, 
+        incloent taxes de canvi de moneda i informes PDF.
     """,
 
-    'author': "My Company",
-    'website': "https://www.yourcompany.com",
+    'author': "SantiS2002",
+    'website': "https://github.com/santiS2002/odooMoviesPractica2",
 
-    # Categories can be used to filter modules in modules listing
-    # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
-    # for the full list
     'category': 'Uncategorized',
     'version': '0.1',
 
-    # any module necessary for this one to work correctly
+    # 'base' és necessari per al model res.country 
     'depends': ['base'],
 
-    # always loaded
     'data': [
         'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
         'views/movies_menus.xml',
         'views/movies_movie_views.xml',
-        'views/movies_view_views.xml'
+        'views/movies_view_views.xml',
+      
+        'reports/movie3_report.xml',
+        'reports/movie3_report_template.xml',
     ],
-    # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
     ],
     'installable': True,
     'application': True,
 }
-
-
